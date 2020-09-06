@@ -1,0 +1,9 @@
+/home/isaac/Desktop/NetLibrary/bin/Release/netstandard2.0/NetLibrary.deps.json
+/home/isaac/Desktop/NetLibrary/bin/Release/netstandard2.0/NetLibrary.dll
+/home/isaac/Desktop/NetLibrary/bin/Release/netstandard2.0/NetLibrary.pdb
+/home/isaac/Desktop/NetLibrary/obj/Release/netstandard2.0/NetLibrary.csprojAssemblyReference.cache
+/home/isaac/Desktop/NetLibrary/obj/Release/netstandard2.0/NetLibrary.AssemblyInfoInputs.cache
+/home/isaac/Desktop/NetLibrary/obj/Release/netstandard2.0/NetLibrary.AssemblyInfo.cs
+/home/isaac/Desktop/NetLibrary/obj/Release/netstandard2.0/NetLibrary.csproj.CoreCompileInputs.cache
+/home/isaac/Desktop/NetLibrary/obj/Release/netstandard2.0/NetLibrary.dll
+/home/isaac/Desktop/NetLibrary/obj/Release/netstandard2.0/NetLibrary.pdb

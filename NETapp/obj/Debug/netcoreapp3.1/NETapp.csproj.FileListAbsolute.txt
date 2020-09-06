@@ -1,0 +1,13 @@
+/home/isaac/Desktop/NETapp/bin/Debug/netcoreapp3.1/NETapp
+/home/isaac/Desktop/NETapp/bin/Debug/netcoreapp3.1/NETapp.deps.json
+/home/isaac/Desktop/NETapp/bin/Debug/netcoreapp3.1/NETapp.runtimeconfig.json
+/home/isaac/Desktop/NETapp/bin/Debug/netcoreapp3.1/NETapp.runtimeconfig.dev.json
+/home/isaac/Desktop/NETapp/bin/Debug/netcoreapp3.1/NETapp.dll
+/home/isaac/Desktop/NETapp/bin/Debug/netcoreapp3.1/NETapp.pdb
+/home/isaac/Desktop/NETapp/obj/Debug/netcoreapp3.1/NETapp.csprojAssemblyReference.cache
+/home/isaac/Desktop/NETapp/obj/Debug/netcoreapp3.1/NETapp.AssemblyInfoInputs.cache
+/home/isaac/Desktop/NETapp/obj/Debug/netcoreapp3.1/NETapp.AssemblyInfo.cs
+/home/isaac/Desktop/NETapp/obj/Debug/netcoreapp3.1/NETapp.csproj.CoreCompileInputs.cache
+/home/isaac/Desktop/NETapp/obj/Debug/netcoreapp3.1/NETapp.dll
+/home/isaac/Desktop/NETapp/obj/Debug/netcoreapp3.1/NETapp.pdb
+/home/isaac/Desktop/NETapp/obj/Debug/netcoreapp3.1/NETapp.genruntimeconfig.cache
