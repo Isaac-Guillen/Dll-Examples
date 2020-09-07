@@ -3,8 +3,8 @@ import ctypes as cpp
 from ctypes import*
 
 dll = cpp.cdll.LoadLibrary('build/libtest.so')
-dll.SayHelloToPython.argstype = None
-dll.SayHelloToPython.restype = None
+dll.SayHelloFromCpp.argstype = None
+dll.SayHelloFromCpp.restype = None
 
 dll.PrintArray.argtypes = [POINTER(c_double), c_size_t, c_size_t, c_size_t, c_size_t]
 dll.PrintArray.restype = None
@@ -21,4 +21,4 @@ print(array)
 
 CallCPPMethod(array)
 
-dll.SayHelloToPython()
+dll.SayHelloFromCpp()

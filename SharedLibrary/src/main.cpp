@@ -9,7 +9,7 @@ using namespace std;
 
 extern "C"
 {
-    void SayHelloToPython()
+    void SayHelloFromCpp()
     {
         Vector3D v = Vector3D(1,1,1);
         cout << "The norm of the vector is: " << v.Norm() << endl;

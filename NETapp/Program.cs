@@ -13,7 +13,7 @@ namespace NETapp
             Console.WriteLine("Hello World!");
             Console.WriteLine("We are about to call the library");
 
-            SafeNativeMethods.SayHelloToPython();
+            SafeNativeMethods.SayHelloFromCpp();
 
             double[ , , ] array3D = new double[ , , ] { { {1, 2, 3}, 
                                                           {3, 4, 5} },
