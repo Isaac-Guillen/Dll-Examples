@@ -8,7 +8,7 @@ namespace NetLibrary
         public double y;
         public double z;
 
-        Vector3D(double x, double y, double z)
+        public Vector3D(double x, double y, double z)
         {
             this.x = x;
             this.y = y;
@@ -20,6 +20,14 @@ namespace NetLibrary
             get
             {
                 return this.CalculateLenght();
+            }
+        }
+        
+        public string Licence
+        {
+            get
+            {
+                return "Vector3D library";
             }
         }
 
