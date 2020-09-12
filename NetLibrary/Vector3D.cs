@@ -31,7 +31,7 @@ namespace NetLibrary
             }
         }
 
-        private double CalculateLenght()
+        private double CalculateLength()
         {
             return Math.Sqrt(this.x*this.x + this.y*this.y + this.z+this.z);
         }
