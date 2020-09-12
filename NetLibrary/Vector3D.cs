@@ -15,15 +15,15 @@ namespace NetLibrary
             this.z = z;
         }
 
-        public double Lenght 
+        public double Length 
         {
             get
             {
-                return this.CalculateLenght();
+                return this.CalculateLength();
             }
         }
         
-        public string Licence
+        public string License
         {
             get
             {
