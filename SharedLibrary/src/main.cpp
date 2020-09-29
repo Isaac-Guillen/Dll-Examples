@@ -4,49 +4,50 @@
 #include <iostream>
 #include "Vector3D.h"
 
+#if defined(_WIN32) || defined(__WIN32__)
+#   define DllExport extern "C" __declspec(dllexport)
+#elif defined(linux) || defined(__linux)
+#   define DllExport extern "C"
+#endif
 
 using namespace std;
 
-extern "C"
+DllExport void SayHelloFromCpp()
 {
-    void SayHelloFromCpp()
-    {
-        Vector3D v = Vector3D(1,1,1);
-        cout << "The norm of the vector is: " << v.Norm() << endl;
-        v.PrintCores();
+    Vector3D v = Vector3D(1,1,1);
+    cout << "The norm of the vector is: " << v.Norm() << endl;
+    v.PrintCores();
 
-        printf("Now from c++ \n");
-        #pragma omp parallel for
-        for(int i = 0; i < 4; i++)
-        {
-            printf("Hello from thread %d \n", omp_get_thread_num());
-        }
+    printf("Now from c++ \n");
+    #pragma omp parallel for
+    for(int i = 0; i < 4; i++)
+    {
+        printf("Hello from thread %d \n", omp_get_thread_num());
     }
+}
 
-    void PrintArray(double *pyhtonArray, int size, int x, int y, int z)
+DllExport void PrintArray(double *pyhtonArray, int size, int x, int y, int z)
+{
+    for (int i = 0; i < size; i++)
     {
-        for (int i = 0; i < size; i++)
-        {
-            cout << "Vector[" << i << "] = " << pyhtonArray[i] << endl;
-        }
+        cout << "Vector[" << i << "] = " << pyhtonArray[i] << endl;
+    }
         
-        cout << "Now in matrix form:" << endl;
+    cout << "Now in matrix form:" << endl;
 
-        for (int k = 0; k < z; k++)
+    for (int k = 0; k < z; k++)
+    {
+        cout << "z = "<< k << endl;
+        for (int j = 0; j < y; j++)
         {
-            cout << "z = "<< k << endl;
-            for (int j = 0; j < y; j++)
+            cout << "[" ;
+            for (int i = 0; i < x; i++)
             {
-                cout << "[" ;
-                for (int i = 0; i < x; i++)
-                {
-                    int index = i + j * x + k * x * y;
-                    cout << pyhtonArray[index] << " ";
-                }
-                cout << "]" << endl; 
+                int index = i + j * x + k * x * y;
+                cout << pyhtonArray[index] << " ";
             }
-            cout << endl;
+            cout << "]" << endl; 
         }
-        
-    }
+        cout << endl;
+    }      
 }
