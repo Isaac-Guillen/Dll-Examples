@@ -23,3 +23,4 @@ target_include_directories(test
 )
 
 target_link_libraries(test PUBLIC OpenMP::OpenMP_CXX)
+set_target_properties(test PROPERTIES PREFIX "")

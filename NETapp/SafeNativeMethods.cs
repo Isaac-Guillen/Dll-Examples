@@ -7,7 +7,7 @@ namespace NETapp
     [SuppressUnmanagedCodeSecurity]
     public static class SafeNativeMethods
     {
-        private const string libraryName = "libtest.so";
+        private const string libraryName = "test";
 
         [DllImport(libraryName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SayHelloFromCpp();
