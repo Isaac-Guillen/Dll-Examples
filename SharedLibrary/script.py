@@ -2,7 +2,7 @@ import numpy as np
 import ctypes as cpp
 from ctypes import*
 
-dll = cpp.cdll.LoadLibrary('build/libtest.so')
+dll = cpp.cdll.LoadLibrary('build/test.so')
 dll.SayHelloFromCpp.argstype = None
 dll.SayHelloFromCpp.restype = None
 
