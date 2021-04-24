@@ -32,6 +32,6 @@ add_library(test SHARED ${cpu_source_files} ${gpu_source_files})
 
 target_include_directories(test PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
-#target_link_libraries(test PUBLIC OpenMP::OpenMP_CXX)
+target_link_libraries(test PUBLIC OpenMP::OpenMP_CXX)
 
 set_target_properties(test PROPERTIES PREFIX "")
