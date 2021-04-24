@@ -14,7 +14,7 @@ IF (OPENMP_FOUND)
     message(STATUS "Openmp added to CUDA compiler")
 
     #add_link_options("$<$<COMPILE_LANGUAGE:CXX>:${OpenMP_CXX_FLAGS}>")
-    #message(STATUS "Openmp added to MSVC Linker")
+    #message(STATUS "Openmp added to C++ Linker")
 
     #add_link_options("$<$<COMPILE_LANGUAGE:CUDA>:-Xlinker=${OpenMP_CXX_FLAGS}>")
     #message(STATUS "Openmp added to CUDA Linker")
