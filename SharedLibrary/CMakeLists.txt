@@ -8,7 +8,7 @@ find_package (OpenMP REQUIRED)
 #add linked if found
 IF (OPENMP_FOUND)
     add_compile_options("$<$<COMPILE_LANGUAGE:CXX>:${OpenMP_CXX_FLAGS}>")
-    message(STATUS "Openmp added to MSVC compiler")
+    message(STATUS "Openmp added to C++ compiler")
 
     add_compile_options("$<$<COMPILE_LANGUAGE:CUDA>:-Xcompiler=${OpenMP_CXX_FLAGS}>")
     message(STATUS "Openmp added to CUDA compiler")
