@@ -83,3 +83,6 @@ bld/
 msbuild.log
 msbuild.err
 msbuild.wrn
+
+#customs
+CallDLL/CallDynamic/DynamicExample/*

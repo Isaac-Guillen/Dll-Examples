@@ -12,9 +12,9 @@
 #   define DllExport 
 #endif
 
-DllExport namespace ExampleLibrary
+namespace ExampleLibrary
 {
-    class MsgPrinter
+    class DllExport MsgPrinter
     {
         public:
 

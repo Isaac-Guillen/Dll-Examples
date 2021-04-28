@@ -9,8 +9,14 @@ set (mylib_version "${deb_example_VERSION_MAJOR}.${deb_example_VERSION_MINOR}.${
 
 set(CMAKE_INSTALL_RPATH $ORIGIN/lib)
 
-
-find_library(DYNAMICLIB test PATHS "${CMAKE_SOURCE_DIR}/../DynamicLibrary/build/")
+if (MSVC)
+    SET(CMAKE_FIND_LIBRARY_PREFIXES "")
+    SET(CMAKE_FIND_LIBRARY_SUFFIXES ".lib" ".dll")
+    find_library(DYNAMICLIB test.lib PATHS "${CMAKE_SOURCE_DIR}/../DynamicLibrary/build/Debug")
+    find_library(DYNAMICLIBDLL test.dll PATHS "${CMAKE_SOURCE_DIR}/../DynamicLibrary/build/Debug")
+else ()
+    find_library(DYNAMICLIB test PATHS "${CMAKE_SOURCE_DIR}/../DynamicLibrary/build/")
+endif ()
 
 file(GLOB cpu_source_files "${CMAKE_SOURCE_DIR}/src/*.cpp")
 
@@ -28,9 +34,13 @@ install (TARGETS CallDynamic
     DESTINATION "${CMAKE_SOURCE_DIR}/DynamicExample")
 
 # Library
-# Note: may not work on windows
-install (FILES "${DYNAMICLIB}"
-    DESTINATION "${CMAKE_SOURCE_DIR}/DynamicExample/lib")    
+if (MSVC)
+    install (FILES "${DYNAMICLIBDLL}"
+        DESTINATION "${CMAKE_SOURCE_DIR}/DynamicExample/")
+else()
+    install (FILES "${DYNAMICLIB}"
+        DESTINATION "${CMAKE_SOURCE_DIR}/DynamicExample/lib")
+endif ()
 
 #includes, for APIs for example
 install (DIRECTORY "${CMAKE_SOURCE_DIR}/../DynamicLibrary/include/"

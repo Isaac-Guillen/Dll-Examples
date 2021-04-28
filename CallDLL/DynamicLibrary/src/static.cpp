@@ -1,6 +1,6 @@
 #include "static.h"
 
-DllExport namespace ExampleLibrary
+namespace ExampleLibrary
 {
     int MsgPrinter::Add(int a, int b)
     {
