@@ -85,4 +85,4 @@ msbuild.err
 msbuild.wrn
 
 #customs
-CallDLL/CallDynamic/DynamicExample/*
+CallDLL/CallDynamic/DynamicExample/
