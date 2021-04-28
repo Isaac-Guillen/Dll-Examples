@@ -6,7 +6,13 @@
 #include <omp.h>
 #include <iostream>
 
-namespace ExampleLibrary
+#if defined(_WIN32) || defined(__WIN32__)
+#   define DllExport __declspec(dllexport)
+#elif defined(linux) || defined(__linux)
+#   define DllExport 
+#endif
+
+DllExport namespace ExampleLibrary
 {
     class MsgPrinter
     {
